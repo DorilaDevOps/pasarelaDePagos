@@ -9,3 +9,7 @@ Fazt Code: https://www.youtube.com/watch?v=MIWz7tXOxNg
 * Recibir pagos de forma global, la integracion con esas pasrelas, procesar estos pagos, registrar, relacionarlo con el usuario, enviar comprobante de pago, seguridad y produccion.
 Cómo recibir pago único o pagos recurrentre al mismo usuario.
 * Relacionar con BD y Roles de Usu.
+
+
+
+* Comienzo de curso 4/5 Mayo
