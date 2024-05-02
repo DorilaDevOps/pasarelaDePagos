@@ -10,6 +10,9 @@ Fazt Code: https://www.youtube.com/watch?v=MIWz7tXOxNg
 Cómo recibir pago único o pagos recurrentre al mismo usuario.
 * Relacionar con BD y Roles de Usu.
 
-
+ANTES DE CURSO
+pnpm init -y
+pnpm add  express morgan(ver peticiones) dotenv(no sube cofiguraciones)
+pnpm add rimraf nodemon(actualiza nav) --d
 
 * Comienzo de curso 4/5 Mayo
