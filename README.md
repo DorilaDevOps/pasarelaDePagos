@@ -11,8 +11,16 @@ Cómo recibir pago único o pagos recurrentre al mismo usuario.
 * Relacionar con BD y Roles de Usu.
 
 ANTES DE CURSO
-pnpm init -y
-pnpm add  express morgan(ver peticiones) dotenv(no sube cofiguraciones)
-pnpm add rimraf nodemon(actualiza nav) --d
+* pnpm init -y
+* pnpm add  express 
+morgan(ver peticiones) 
+dotenv(no sube cofiguraciones)
+* pnpm add rimraf nodemon(actualiza nav) --d
 
+ * Se cambio "type": "module", en script package
+ * por "type": "commonjs",
+ por eso usaremos reuire en vez de impoort
+ * y no usaremos exportar el modulo
+  
+  
 * Comienzo de curso 4/5 Mayo

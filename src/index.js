@@ -1,10 +1,13 @@
 
 //EXPRESS
-//import {express} from 'express';
-const express = require('express');
+import express from 'express';
+//const express = require('express');
 
-import payRoutes from './routes/payment_routes.js';
-//const payRoutes = require ('./routes/payment_routes.js');
+//RUTA
+//import {router, meses} from './routes/payment_routes.js';
+//import router from './routes/payment_routes.js';
+import * as pyRoutes from './routes/payment_routes.js';
+//const router = require ('./routes/payment_routes.js');
 
 // server
 //import { createServer } from 'node:http';
@@ -12,14 +15,22 @@ import payRoutes from './routes/payment_routes.js';
 const app = express();
 const port = 3000;
 
-app.use(payRoutes);
+ //const mes = pyRoutes.meses;
+///app.use(pyRoutes);
+app.use(pyRoutes.router);
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+app.get('/lala', (req, res) => {
+  res.send('Hello LALA!')
+})
 
 app.listen(port, () => {
   console.log(`Example 3 app listening on port ${port}`)
+  //console.log(`USANDO IPMORT ${mes} --- ${pyRoutes.sayBye} `);
+  console.log(`USANDO IPMORT ${pyRoutes.router} `);
+  
 })
 
 
