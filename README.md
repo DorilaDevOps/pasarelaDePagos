@@ -24,3 +24,4 @@ dotenv(no sube cofiguraciones)
   
   
 * Comienzo de curso 4/5 Mayo
+Que no hice
