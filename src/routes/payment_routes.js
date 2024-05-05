@@ -4,7 +4,7 @@ import {Router} from 'express';
 
  const router = Router();
 
-router.get('/create-order',  (req, res)=> res.send('create order'));
+router.get('/create-order',  (req, res)=> res.send('creando la ORDEN'));
 router.get('/success-order',  (req, res)=> res.send('success order'));
 router.get('/webhook-order',  (req, res)=> res.send('pending webhook'));
 

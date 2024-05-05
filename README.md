@@ -1,7 +1,12 @@
 # pasarelaDePagos
-Pagos Online - con Stripe, Paypal y Mercado Pago
-urso Capacitacion de Pagos Online - con Stripe, Paypal y Mercado Pago
+
+* Pagos Online para integrar en multiples proyectos.
+Aceptar pagos online en latinoamerica usando Nodejs y la pasarela de pago Mercadopago
+Crearemos una REST API con Nodejs y Express.
+ 
 Fazt Code: https://www.youtube.com/watch?v=MIWz7tXOxNg
+quedo en es
+ FaztCode (https://www.youtube.com/watch?v=QqiDandkcBY) 
 
 * Pagos Online de los 3 procesadores o pasarelas de pago como lo son Stripe, Paypal y Mercado Pago, usándolos en conjunto en una aplicación de Nextjs.
 * Pagos Online en apps webs, para cualquier proyecto. 
@@ -10,7 +15,7 @@ Fazt Code: https://www.youtube.com/watch?v=MIWz7tXOxNg
 Cómo recibir pago único o pagos recurrentre al mismo usuario.
 * Relacionar con BD y Roles de Usu.
 
-ANTES DE CURSO
+# Arranca sasí
 * pnpm init -y
 * pnpm add  express 
 morgan(ver peticiones) 
@@ -22,6 +27,4 @@ dotenv(no sube cofiguraciones)
  por eso usaremos reuire en vez de impoort
  * y no usaremos exportar el modulo
   
-  
-* Comienzo de curso 4/5 Mayo
-Que no hice
+# MercadoPago, integrada al proyetco
