@@ -18,9 +18,9 @@ const port = 3000;
  //const mes = pyRoutes.meses;
 ///app.use(pyRoutes);
 app.use(pyRoutes.router);
-
+const dato = pyRoutes.otra;
 app.get('/', (req, res) => {
-  res.send('Hello Worlddddd!')
+  res.send('HOLAA Worlddddd! ' + dato);
 })
 app.get('/lala', (req, res) => {
   res.send('Hello LALA!')
@@ -28,9 +28,7 @@ app.get('/lala', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example 3 app listening on port ${port}`)
-  //console.log(`USANDO IPMORT ${mes} --- ${pyRoutes.sayBye} `);
-  console.log(`USANDO IPMORT ${pyRoutes.router} `);
-  
+  //console.log(`USANDO IPMORT ${mes} --- ${pyRoutes.sayBye} `);  
 })
 
 

@@ -2,9 +2,11 @@
 import {Router} from 'express';
 //const { Router } = require("express");
 
+import {crearOrden, otra, creandoPago} from '../controllers/pago.controller.js';
+
  const router = Router();
 
-router.get('/create-order',  (req, res)=> res.send('creando la ORDEN'));
+router.get('/create-order',  crearOrden);
 router.get('/success-order',  (req, res)=> res.send('success order'));
 router.get('/webhook-order',  (req, res)=> res.send('pending webhook'));
 
@@ -15,7 +17,7 @@ function sayBye() {
 
  
 //export {sayBye,meses,router};
-export {router};
+export {router, otra};
 //export default router;
 
 /***
