@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MercadoP</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="otroEstilo.css" />
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body style="color:rgb(218, 55, 55); background-color: rgb(212, 168, 253)">
+
+    <div id="myframe">
+
+        <h1 id="id01">Old Heading</h1>
+        <div class="gridContainer">
+            <img id="myImage" src="./img//2998143-flower-love-nature-plant-rose-valentine-day_99849 (8).png"  style="background-color:#f531d4;">
+
+            <div id="contenido"  style="background-color:#9dd265;">
+                <button id="btnMostrar" class="btn button" style="background-color:orange" onclick="mostrar()"></button>
+                <h1 id="myHeader">Hello World!</h1>
+                <button onclick="displayResult()">Change text</button>
+            </div>
+
+
+            <div style="background-color:#6565d2;">
+                <button class="button button1" id="btnCofirm" onclick="cambo()">Confirm</button>
+                <button class="button button2" id="btnOver" onmouseover="functionOver()" onmouseleave="functionLeave()">OVER</button>
+                <div>
+                    <label for="datoTxt">Ingrese</label>
+                    <input type="text" id="datoTxt"> DATO</input>
+                </div>
+            </div>
+
+            <hr style="border:1px solid yellow">
+        </div>
+        <h2>Slide in Overlay from the Bottom</h2>
+        <div class="contenedorImg">
+            <img src="./img/rr jpg.jpg" alt="EscudoFenix" class="imagenResponsiva">
+            <div class="overlay">
+                <div class="textOver">FENIX TE DIGO!</div>
+              </div>
+            </div>
+
+        <script type="text/javascript">
+
+            function cambo() {
+                /* 
+                        var contenido = document.getElementById('a').innerHTML;
+                        if (contenido == "Hola") {
+                            document.getElementById('a').innerHTML = "Mundo";
+                        }else{
+                            document.getElementById('a').innerHTML = "Hola";
+                        } */
+                confirm("Press a button!\nEither OK or Cancel.");
+                console.log("OOOE");
+            }
+            /*  function myFunction(){
+                 alert("ALERTA");
+             }
+          */
+        </script>
+        <form id="form-checkout">
+            <div id="form-checkout__cardNumber" class="container"></div>
+            <div id="form-checkout__expirationDate" class="container"></div>
+            <div id="form-checkout__securityCode" class="container"></div>
+            <input type="text" id="form-checkout__cardholderName" />
+            <select id="form-checkout__issuer"></select>
+            <select id="form-checkout__installments"></select>
+            <select id="form-checkout__identificationType"></select>
+            <input type="text" id="form-checkout__identificationNumber" />
+            <input type="email" id="form-checkout__cardholderEmail" />
+
+            <button type="submit" id="form-checkout__submit">Pagar</button>
+            <progress value="0" class="progress-bar">Cargando...</progress>
+        </form>
+
+
+    </div>
+    <!--     Inatalar sdknpm install @mercadopago/sdk-js
+ -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <!-- <script src="index.js"></script> -->
+</body>
+
+</html>
