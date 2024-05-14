@@ -11,7 +11,7 @@ router.get('/create-order',  crearOrden);
 router.get('/success-order',  (req, res)=> res.send('success order'));
 router.get('/webhook',  (req, res)=> res.send('ver WebHooks '));
 
-router.get('/parametro/:nombre', guardaParametroURL);
+router.get('/enviarMsj/:nombre', guardaParametroURL);
 router.get('/verMsj', verMensajes);
 
 // Ruta para manejar todas las demás solicitudes

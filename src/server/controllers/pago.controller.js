@@ -2,6 +2,8 @@
 import { MercadoPagoConfig, Payment, Customer } from "mercadopago";
 import mercadopago from 'mercadopago';
 import { loadMercadoPago } from "@mercadopago/sdk-js";
+import {fechaHoy, otraFecha} from '../Utils/fecha.js';
+import Usuario from '../Models/Usuario.js'
 
 
 const tokenVendedor = "TEST-3098823193955224-050414-3f1d98d54ca09994b2d6a7983b8fa15d-1467075401";
@@ -82,7 +84,6 @@ export const otra = "andres";
 
 export const crearOrden = async (req, res) => {
 
-
   const client = new MercadoPagoConfig({
  
     accessToken:  'TEST-5417878203690460-050414-ad0526de3f85f3c3138e46265f8e402b-1349912905',
@@ -143,12 +144,38 @@ export const crearOrden = async (req, res) => {
   
 };
 
+
 export const guardaParametroURL =  (req,res,next)=>{
     try {
     const dato = req.params.nombre;
-    const totoElUsu = new DatoCompleto(dato);
-    parametros.unshift(totoElUsu);
-      console.log(` array ${parametros.length}-¡Hola, ${dato}! \nMis Datos: ${JSON.stringify(parametros)}- `);
+    const elUsuario = new Usuario(dato);
+    parametros.unshift(elUsuario);
+    let otiaF = otraFecha();
+    let start = fechaHoy();
+
+    console.log('starting timer...');
+    setTimeout(() => {
+      const millis = Date.now() - start;
+    
+      console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+      // Expected output: "seconds elapsed = 2"
+    }, 2000);
+
+    const birthday = new Date('January 14, 1973 23:15:30');
+const day1 = birthday.getDay();
+// Sunday - Saturday : 0 - 6
+console.log(day1);
+
+var d1 = new Date();
+var d2 = 1 * new Date();
+var d3 = new Date().getTime();
+
+console.log(`D1 = ${d1} OTIT ${otiaF}`);
+console.log(d1);
+console.log(d2);
+console.log(d3);
+
+      console.log(` array ${parametros.length}-¡Hola, ${dato}! \nMis Datos: ${JSON.stringify(parametros)}- V otraFecha --${otiaF.toString()} --START ${start.toString()}`);
     // res.redirect("http://localhost:3000/verMensajes");
     res.send(` array ${parametros.length}-¡Hola, ${dato}! \nMis Datos: ${JSON.stringify(parametros)}- `);
     
@@ -159,7 +186,8 @@ export const guardaParametroURL =  (req,res,next)=>{
 export const verMensajes = async (req, res,next)=> {
   try {
     setTimeout(()=>{
-      res.send(`Mensaje: -- ${parametros[0].hablar()}*****************)}`);
+      res.send(`Mensaje: -- ${parametros[0].hablar()}***************`);
+      // document.location.reload();
       console.log(`Mensaje: -- ${parametros[0].hablar()}*****************)}`);
     },3000) 
   } catch (error) {
@@ -167,27 +195,3 @@ export const verMensajes = async (req, res,next)=> {
   }
 }
 const parametros =[];
-class DatoCompleto
-{
-  datoCompleto={
-  name:"",
-  fecha:new Date(),
-};
-// types=Enum["compra","Vende"];
-
-constructor(name){
-  this.datoCompleto.name=name;
-}
-
-hablar=()=>{
-  return (`HABLANDO▶️- ${this.datoCompleto.name} -- ${this.datoCompleto.fecha}` ) ;
-}
-
-
-/* enum StatusCodes {
-  NotFound = 404,
-  Success = 200,
-  Accepted = 202,
-  BadRequest = 400
- */
-}

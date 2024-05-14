@@ -26,11 +26,14 @@ app.use((req, res, next) => {
 const dato = pyRoutes.otra;
 
 app.get('/', async (req, res) => {
+  setTimeout(() => {
+    console.log(`hora actual: ${new Date().getSeconds()}`);
+  }, 2000);
   try {
     setTimeout(() =>{
-     res.send( `HOLiiiS Worlddddd! ${dato} en ${new Date()}`);
+     res.send( `HOLaa Worlddddd! ${dato} en -${new Date().getMinutes()}`);
      
-    console.log( "Holis");
+    console.log( `Holis Worlddddd! ${dato} en -${new Date().getMinutes()}`);
   },2000);
   } catch (error) {
     

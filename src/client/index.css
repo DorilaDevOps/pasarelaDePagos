@@ -1,82 +1,232 @@
 
-/* * {
+#myframe {
+  width: 80vw;
+  height: 600px;
+  border: none;
+}
+main{
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+                  var(--fondoImg);
+}
+
+header{
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: center;
+  justify-content : space-around;    
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto;
+  background-color: #16161d;
+  border: 2px solid red;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gridContainer:nth-child(3) {
+  background: rgb(87, 47, 14);
+  place-self: center;
+}
+
+#form-checkout {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.container {
+  height: 18px;
+  display: inline-block;
+  border: 1px solid rgb(118, 118, 118);
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+
+#datoTxt {
+  color: rgb(16, 81, 5);
+}
+
+button:first-child {
+  font-weight: bold;
+  /* background-color: #04aa0c; */
+}
+
+.botonesGrid{
+  display: grid;
+  /* height: 200px; */
+  grid-template-columns:90%;
+  grid-template-rows: repeat(3, 2fr);
+  justify-content: center;  
+  align-items: baseline;  
+  padding: 25px 5px;
+}
+/* .botonesGrid>*{ */
+.botonesGrid .inpuText{ 
+  /* place-self: center; */
+  background-color: blue;
+  grid-row: span 3/ 6;
+}
+.botonesFlex{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content : space-between;  
+}
+.botonesFlex *{
+flex-grow: 1;
+flex-basis: 200;
+}
+
+.button {
+  border: none;
+  color: rgb(207, 18, 128);
+  padding: 15px 32px;
   text-align: center;
-  color: blue;
-} */
-#myframe{
-    width: 36vw; 
-    height: 600px;
-    border: none;
-  }
-  @media only screen and (width <= 980px) {
-    #myframe{
-      width: 100%;
-      height: 440px;
-    }
-  }
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
-  .gridContainer{
-    display: grid;
-    grid-template-columns: auto;
-    background-color: #16161d;;
-    border: 2px solid red;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-    #form-checkout {
-      display: flex;
-      flex-direction: column;
-      max-width: 600px;
-    }
+#btnMostrar {
+  transition:transform 2s;
+}
 
-    .container {
-      height: 18px;
-      display: inline-block;
-      border: 1px solid rgb(118, 118, 118);
-      border-radius: 2px;
-      padding: 1px 2px;
-    }
-    #datoTxt{
-      color:rgb(16, 81, 5);
-    }
-    .button {
-      border: none;
-      color: rgb(206, 241, 147);
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
+#btnMostrar:hover {
+  background-image: url("./img/rr\ jpg.jpg");
+  background-image: repeating-conic-gradient(red 10%, yellow 20%);
+  /* transition: ease-in-out; */
+  transform: rotate(360deg);
+}
 
-    #btnMostrar{
-      transition: width 2s;
-    }
-    #btnMostrar:hover{
-      background-image: url("./img/rr\ jpg.jpg");
-      background-image: repeating-conic-gradient(red 10%, yellow 20%);
-      /* transition: ease-in-out; */
-      width: 300px;
-    }
-    .button2 {background-color: #4904aa;} 
-    .button1 {background-color: #04AA6D;} 
-    .button1:hover{background-color: #16161d;} 
+.button2 {
+  background-color: #4904aa;
+}
 
-    img{
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      padding: 5px;
-      margin-left: auto;
+.button1 {
+  background-color: #04AA6D;
+}
+
+.button1:hover {
+  background-color: #16161d;
+}
+.but1:hover{
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.gridContainer .imagenCentrada{  
+  background-color:#6565d2; 
+  display: flex;
+  /* la centra lo de abajo */
+}
+
+img {
+  /* position: relative; */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: auto;
   margin-right: auto;
-      /* 
+  /* 
       max-width: 100%;
   height: auto; */
-    }
-    #myImage:hover{
-      
-    transform:scaleX(-1);
-    filter: grayscale(100%);
-    }
+}
+.contenedorImagen{
+  border: 1px solid green;
+  overflow: auto;
+}
+.contenedorImagen::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#myImage:hover {
+  transform: scaleX(-1);
+  filter: grayscale(100%);
+}
+.reloj1{
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: center;
+  justify-content : space-around;  
+  background-color: #04AA6D;
+  text-shadow: 0 0 20px rgba(10,175,230,1),0 0 20px rgba(10,175,230,0);
+  transition: transform .2s; /* Animation */
+  /* width: 50px;
+  height: 50px; 
+  margin: 0 auto;*/
+}
+.reloj1:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.verReloj{
+  background-color: #30cce0; 
+  width: auto; 
+  align-content: center;
+}
+.pVerReloj{}
+
+.contenedorReloj{
+  /* display: flex; */
+  flex-flow: row-reverse wrap;
+  background: radial-gradient(circle, rgba(36, 15, 112, 0.281) 15%, rgba(3, 11, 56, 0.329) 31%, rgba(12,5,117,0.6054796918767507) 54%);
+
+  float: left;
+}
+.reloj2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* color: white; */
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.tiempo, .fecha{
+  padding: 5px 0;
+  /* width: 0.7em; */
+  /* font-size: 400%; */
+}
+.fecha{    
+  font-family: algerian, courier;
+  color:#16161d;
+  letter-spacing: 1em;
+  font-size: 2rem;
+}
+.tiempo{  
+  font-family: cursive;
+  color: #cacae7;  
+  letter-spacing: .5em;
+  font-size: 2.5rem;
+  /* line-height: 80%; */
+}
+#rango{
+  color: aliceblue;
+  background-color: #16161d52;
+  letter-spacing: .5em;
+  font-size: 2.5rem;
+  border: 1px solid red;
+}
+
+
+.footer{
+  background-color: #16161d;
+  /* position: fixed; */
+  width: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  
+  /* flex-wrap: wrap; */
+  /* flex-flow: row nowrap; */
+  
+flex-flow: wrap;
+  justify-content : space-around;  
+  
+}
