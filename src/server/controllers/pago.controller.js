@@ -6,10 +6,11 @@ import {fechaHoy, otraFecha} from '../Utils/fecha.js';
 import Usuario from '../Models/Usuario.js'
 
 
-const tokenVendedor = "TEST-3098823193955224-050414-3f1d98d54ca09994b2d6a7983b8fa15d-1467075401";
+const tokenVendedor = 'TEST-3098823193955224-050414-3f1d98d54ca09994b2d6a7983b8fa15d-1467075401';
 const YOUR_PUBLIC_KEY= "TEST-1e78dd1d-8753-4f08-8ed5-0a3cb08f2cd3";
+const opciones= { timeout: 5000, idempotencyKey: "abc" };
 
-//paso -1
+//Prueba - 0
 //const mp01 = new MercadoPago(YOUR_PUBLIC_KEY);
 const mp02 = new MercadoPagoConfig(YOUR_PUBLIC_KEY);
 try {
@@ -18,33 +19,21 @@ try {
   console.log(Error.message("error"));
 }
 
-//paso0
-const client2 = new MercadoPagoConfig({ accessToken: tokenVendedor });
-
-/* await loadMercadoPago();*/
-const mp = new MercadoPagoConfig(tokenVendedor,{
-  locale:"es-AR"
-});
-try {
-  console.log("WI"+JSON.stringify(mp));
-} catch (error) {
-  console.log('NON message');
-}; 
-
+/**
+ * Prueba - 3 
+ * Initialize the client object 
+ */
+const client2 = new MercadoPagoConfig({ accessToken: tokenVendedor, options: { timeout: 5000, idempotencyKey: "abc" },locale:"es-UY"} );
 const customer = new Customer(client2);
 try {
-  console.log(customer.get(customer.id));
+  console.log(customer);
+  // console.log(`Cliente- ${client2}- Data - ${JSON.stringify(client2.options)}`);
+  console.log(`Cliente- ${Json.stringify(customer)}- Data - ${JSON.stringify(customer.options)}`);
+  // console.log(customer.get(customer.id));
 } catch (error) {
   console.log("No salio");
 }
 
-// paso 2: Initialize the client object 
-/*token de integracion del usu vendedor Test prueba*/
-/* const client = new MercadoPagoConfig({
- 
-  accessToken:  'TEST-5417878203690460-050414-ad0526de3f85f3c3138e46265f8e402b-1349912905',
-  options: { timeout: 5000, idempotencyKey: "abc" },
-}); */
 
 //crea tarjetas de ese cliente
 const body2 = {
@@ -53,7 +42,7 @@ const body2 = {
 
 const e_mail = "my.user@example.com";
 
-// Paso 3: Inicializar el objeto API
+// Prueba 3: Inicializar el objeto API
 /* const payment = new Payment(client); */
 
 // Step 4: Create the request object
@@ -80,7 +69,7 @@ const items = [];
   .then(console.log())
   .catch(console.log); */
 
-export const otra = "andres";
+export const otra = "andres Controller";
 
 export const crearOrden = async (req, res) => {
 

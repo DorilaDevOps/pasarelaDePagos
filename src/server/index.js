@@ -14,29 +14,29 @@ import * as pyRoutes from './routes/payment_routes.js';
 
 const app = express();
 const port = 3000;
-
+var url1='';  // URL req.get('host');
  //const mes = pyRoutes.meses;
 ///app.use(pyRoutes);
 app.use(pyRoutes.router);
-app.use((req, res, next) => {
- 
+app.use((req, res, next) => { 
   next(); // Llama a la función next() para pasar la solicitud al siguiente middleware
 });
 
 const dato = pyRoutes.otra;
 
-app.get('/', async (req, res) => {
-  setTimeout(() => {
-    console.log(`hora actual: ${new Date().getSeconds()}`);
-  }, 2000);
+app.get('/', async (req, res) => {  
+ url1 = req.get('host');
   try {
     setTimeout(() =>{
-     res.send( `HOLaa Worlddddd! ${dato} en -${new Date().getMinutes()}`);
+     res.send( `HOLaa Worlddddd! ${dato} Estas en URL- ${url1} - Fecha -${new Date().toLocaleDateString()}- 
+     \n toLocaldateString: ${new Date().toLocaleDateString()}
+     \ntoDateString: ${new Date().toDateString()}
+     \ntoLocaltring: ${new Date().toLocaleString()}
+     \nHora: \n${new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric",hour:"numeric", minute:"numeric", second:"numeric"})}`);
      
-    console.log( `Holis Worlddddd! ${dato} en -${new Date().getMinutes()}`);
+    console.log( `Holis Worlddddd! ${dato} Fecha -${new Date().getMinutes()}`);
   },2000);
-  } catch (error) {
-    
+  } catch (error) {    
     console.log(error, "eeroo1");
   }
  
@@ -47,8 +47,11 @@ app.get('/', async (req, res) => {
  */ 
 
 app.listen(port, (req, res, next) => {
+  
+  setTimeout(() => {
+    console.log(`Example app listening on port ${port} - de la rut ${port} hora actual:${new Date().toLocaleString()}`);
+  }, 2000);
   // rutaLocal =req.url;
-  console.log(`Example 3 app listening on port ${port} - de la rut ${port} en ${new Date()}`);
   //console.log(`USANDO IPMORT ${mes} --- ${pyRoutes.sayBye} `);  
 })
 const cambo = ()=>{

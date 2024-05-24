@@ -1,9 +1,4 @@
 
-#myframe {
-  width: 80vw;
-  height: 600px;
-  border: none;
-}
 main{
   background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
                   var(--fondoImg);
@@ -16,6 +11,18 @@ header{
   align-items: center;
   justify-content : space-around;    
 }
+/* .container {
+  height: 18px;
+  display: inline-block;
+  border: 1px solid rgb(118, 118, 118);
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+#myframe {
+  width: 80vw;
+  height: 600px;
+  border: none;
+} */
 .gridContainer {
   display: grid;
   grid-template-columns: auto;
@@ -33,14 +40,6 @@ header{
   display: flex;
   flex-direction: column;
   max-width: 600px;
-}
-
-.container {
-  height: 18px;
-  display: inline-block;
-  border: 1px solid rgb(118, 118, 118);
-  border-radius: 2px;
-  padding: 1px 2px;
 }
 
 #datoTxt {

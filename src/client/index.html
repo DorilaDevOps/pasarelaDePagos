@@ -16,8 +16,8 @@
     <!-- UrlImg -->
     <link rel="icon" type="image/x-icon" href="./img/config3.png">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Estilos -->
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="otroEstilo.css" />
@@ -27,68 +27,111 @@
     <!-- <script type="module" src="index.js"></script> -->
 </head>
 
-<body style="color:rgb(218, 55, 55); background-color: var(--bg-color)">
-    <main class="main">
+<body>
+    <div class="text-center" style="display: flex;">
         <h1>Good Styles</h1>
+        <img src="./img/sunflower.png" class="rounded float-right" alt="Responsive image"
+            style="display: inline-block;">
+        <!-- <figcaption class="figure-caption text-right">A caption for the above image.</figcaption> -->
+        <!--  class="rounded float-right"  img-fluid img-thumbnail" img-fluid-->
+    </div>
 
-        <div id="myframe">
-            <header class="header sticky">
-                <button type="button" onClick="window.location.reload()" name="recarga">
-                    <svg aria-hidden="true" viewBox="0 0 10 10">
-                        <path d="m7.4 8.8-2.4-1.3-2.4 1.3.46-2.7-2-1.9 2.7-.39 1.2-2.5 1.2 2.5 2.7.39-1.9 1.9z" />
-                    </svg>
-                    Reload Page
+    <container id="myframe">
+
+        <header class="header sticky">
+            <button type="button" onClick="window.location.reload()" name="recarga">
+                <svg aria-hidden="true" viewBox="0 0 10 10">
+                    <path d="m7.4 8.8-2.4-1.3-2.4 1.3.46-2.7-2-1.9 2.7-.39 1.2-2.5 1.2 2.5 2.7.39-1.9 1.9z" />
+                </svg>
+                Reload Page
+            </button>
+            <button type="button" class="btn" name="alereta" onclick="alert('This piece was composed by Kikiriyá.')"
+                value="ALERTAA">
+                MENU
+            </button>
+            <div class="reloj1">
+                <h4>RELOJ</h4>
+                <button type="button" class="btn" name="HORA" onclick="startReloj()" value="HORA">
+                    START
                 </button>
-                <button type="button" class="btn" name="alereta" onclick="alert('This piece was composed by Kikiriyá.')"
-                    value="ALERTAA">
-                    MENU
+                <button type="button" class="btn" name="stop" onclick="stopReloj()" value="stop">
+                    STOP
                 </button>
-                <div class="reloj1">
-                    <h4>RELOJ</h4>
-                    <button type="button" class="btn" name="HORA" onclick="startReloj()" value="HORA">
-                        START
-                    </button>
-                    <button type="button" class="btn" name="stop" onclick="stopReloj()" value="stop">
-                        STOP
-                    </button>
-                    <div class="verReloj">
-                        <p class="pVerReloj" name="elParrafo"></p>
-                        <span id="rango"></span>
-                    </div>
+                <div class="verReloj">
+                    <p class="pVerReloj" name="elParrafo"></p>
+                    <span id="rango"></span>
                 </div>
-
-                <div class="contenedorReloj">
-                    <div class="reloj2">
-                        <p id="fecha" class="fecha"></p>
-                        <p id="tiempo" class="tiempo"></p>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-secondary" onclick="relojDigital()">Secondary</button>
-
-            </header>
-
-            <div class="aside">
-                <div class="card">
-                    <div class="font-side">
-
-                    </div>
-                </div>
-                <div class="div" style="display:grid, background-color=red, width=30px; ">
-                    <div class="parent parent1">
-                        <div class="child child1"></div>
-                    </div>
-                    <div class="parent parent2">
-                        <div class="child child2"></div>
-                    </div>
-                    <div class="parent parent3">
-                        <div class="child child3"></div>
-                    </div>
-                </div>
-
             </div>
 
-            <h2 id="id01">Old Heading</h2>
+            <div class="contenedorReloj">
+                <div class="reloj2">
+                    <p id="fecha" class="fecha"></p>
+                    <p id="tiempo" class="tiempo"></p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="relojDigital()">Secondary</button>
 
+        </header>
+
+        <aside class="aside">
+            <div class="card" style="background-color: rgb(11, 141, 93); ">
+                <!--  <div class="font-side"style="background-color: rgb(213,244,151);">
+                </div> -->
+            </div>
+            <div class="divCentrados">
+                <div class="parent parent1">
+                    <div class="child child1"></div>
+                </div>
+                <div class="parent parent2">
+                    <div class="child child2"></div>
+                </div>
+                <div class="parent parent3">
+                    <div class="child child3"></div>
+                </div>
+            </div>
+        </aside>
+<h2>Convertidor numeros de <span>sistema de numeración posicional </span></h2>
+        <table class="table-hover table-dark " id="table">
+            <p>Un sistema de numeración posicional utiliza la posición de los símbolos para indicar su valor. </p>
+            <p>    En estos sistemas, el valor de cada dígito depende no solo del valor del símbolo, sino también de su posición.</p>
+            <p>El sistema hexadecimal es, por lo tanto, un sistema de numeración posicional que tiene como base el 16.
+            <p>Esto quiere decir que el sistema hexadecimal utiliza 16 dígitos diferentes. </p>
+            <p>En otras palabras: hay 16 dígitos, frente a los dos del sistema binario (1 y 0) o los diez del sistema
+                decimal (de 0 a 9).</p>
+            <thead>
+                <tr>
+                    <th style="max-width: 20px;"><button class="btn btn-warning" style="width: 100%;">Convertir</button></th>
+                    <th colspan="3"><input type="text" id="btnResHexa" placeholder="Resultado" style="width: 100%; background-color: #9dd265; text-align: center;"></th>
+                </tr>
+                <tr>
+                    <th scope="col" class="bg-danger" style="max-width: 20px;"><input type="text" id="btnReqHexa" placeholder="?" style="width: 100%; background-color: #9dd265; text-align: center;"></th>
+                    <th scope="col">Decimal</th>
+                    <th scope="col">Hexadecimal</th>
+                    <th scope="col">Binario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>  <th scope="row">0</th> <td>0</td> <td>0</td> <td>0000</td></tr>
+                <tr>  <th scope="row">1</th> <td>1</td> <td>0</td> <td>0001</td></tr>
+                <tr>  <th scope="row">2</th> <td>2</td> <td>0</td> <td>0010</td></tr>
+                <tr>  <th scope="row">3</th> <td>3</td> <td>0</td> <td>0011</td></tr>
+                <tr>  <th scope="row">4</th> <td>4</td> <td>0</td> <td>0100</td></tr>
+                <tr>  <th scope="row">5</th> <td>5</td> <td>0</td> <td>0101</td></tr>
+                <tr>  <th scope="row">6</th> <td>6</td> <td>0</td> <td>0110</td></tr>
+                <tr>  <th scope="row">7</th> <td>7</td> <td>0</td> <td>0111</td></tr>
+                <tr>  <th scope="row">8</th> <td>8</td> <td>0</td> <td>1000</td></tr>
+                <tr>  <th scope="row">9</th> <td>9</td> <td>0</td> <td>1001</td></tr>
+                <tr>  <th scope="row">10</th> <td>A</td> <td>0</td> <td>1010</td></tr>
+                <tr>  <th scope="row">11</th> <td>B</td> <td>0</td> <td>1011</td></tr>
+                <tr>  <th scope="row">12</th> <td>C</td> <td>0</td> <td>1100</td></tr>
+                <tr>  <th scope="row">13</th> <td>D</td> <td>0</td> <td>1101</td></tr>
+                <tr>  <th scope="row">14</th> <td>E</td> <td>0</td> <td>1110</td></tr>
+                <tr>  <th scope="row">15</th> <td>F</td> <td>0</td> <td>1111</td></tr>
+            </tbody>
+        </table>
+
+        <main class="main">
+            <h2 id="id01">Old Heading</h2>
 
             <div class="gridContainer">
                 <div class="imagenCentrada">
@@ -143,28 +186,47 @@
             </div>
 
             <form id="form-checkout">
-                <div id="form-checkout__cardNumber" class="container"></div>
-                <div id="form-checkout__expirationDate" class="container"></div>
-                <div id="form-checkout__securityCode" class="container"></div>
-                <input type="text" id="form-checkout__cardholderName" />
-                <input type="text" id="form-checkout__identificationNumber" />
-                <input type="email" id="form-checkout__cardholderEmail" />
-
-                <button type="submit" id="form-checkout__submit">Pagar</button>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Pagar</button>
             </form>
 
-            <footer class="footer">
-                <h3>FOOTER</h3>
-                <button type="button" class="btn btn-success" id="1">DESABILITA</button>
-                <button type="button" class="btn btn-success" id="2">ABILITA</button>
-                <button type="button" class="btn btn-success" id="3">ABILITA</button>
-                <div class="contenedorImagen">
-                    <img class="otraImg" src="./img/rr jpg.jpg" alt="Escudo">
-                </div>
-            </footer>
-        </div>
-    </main>
+        </main>
 
+        <footer class="footer">
+            <h3>FOOTER</h3>
+            <button type="button" class="btn btn-success" id="1">DESABILITA</button>
+            <button type="button" class="btn btn-success" id="2">ABILITA</button>
+            <button type="button" class="btn btn-success" id="3">ABILITA</button>
+            <div class="contenedorImagen">
+                <img class="otraImg" src="./img/rr jpg.jpg" alt="Escudo">
+            </div>
+        </footer>
+
+    </container>
 
     <script type="text/javascript">
         function cambo(boto) {
@@ -192,8 +254,8 @@
             const date = new Date();
             contador = date.getSeconds();
             parraforeloj.innerHTML = date.toLocaleTimeString();
-           /*  ptiempo.innerHTML = date.toLocaleTimeString();
-            pfecha.innerHTML = date.toLocaleTimeString(); */
+            /*  ptiempo.innerHTML = date.toLocaleTimeString();
+             pfecha.innerHTML = date.toLocaleTimeString(); */
             span.innerText = contador;
         }
         function startReloj() {
@@ -212,26 +274,25 @@
             const tiempoLocal = document.querySelector(".tiempo");
             let f = new Date(),
                 month = f.getMonth() + 1,
-                diaValor = f.getDay(),
-                dia = f.getDate(),
+                diaValor = f.getDay(), //numero dia de la semana 0-6
+                dia = f.getDate(), //hora universal, milisegundos transcurridos desde el 1 de Enero de 1970 
                 anio = f.getFullYear(),
-                minutes = f.getMinutes(), 
+                minutes = f.getMinutes(),
                 seconds = f.getSeconds(),
                 hours = f.getHours(),
 
-                fecha = Date.now();
-                let semana=['Dom','Lun','Mar','Mier','Jue','Vie','Sab'];
-                let verSemana=(semana[diaValor]);
+                timeString = f.toLocaleDateString(); //fecha comun d/m/anio
+            fecha = Date.now();
 
-                minutes=('0'+minutes).slice(-1);
-                dia=('0'+dia).slice(-2);
-                month =('0'+month).slice(-2);
+            let semana = ['Dom', 'Lun', 'Mar', 'Mier', 'Jue', 'Vie', 'Sab'];
+            let verSemana = (semana[diaValor]);
 
-            let timeString = f.toLocaleDateString(); //fecha comun
-            fechalocal.innerHTML = hours+"-"+minutes+"-"+seconds+"-"+timeString;
-            tiempoLocal.innerHTML = dia+"/"+month+"del"+anio+"-"+verSemana;
-            
-            
+            minutes = (minutes);
+            // dia=('0'+dia).slice(-2);
+            month = ('0' + month).slice(-2);
+
+            fechalocal.innerHTML = hours + "-" + minutes + "-" + seconds + "-" + timeString;
+            tiempoLocal.innerHTML = dia + "/" + month + "del" + anio + "-" + verSemana;
 
             setInterval(() => {
                 relojDigital();
